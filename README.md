@@ -6,19 +6,19 @@ Le site c'est [books.toscrape.com](https://books.toscrape.com) un faux catalogue
 
 Tout est dans `notebooks/collecte.ipynb` et le résultat est dans `data/poetry.csv`.
 
-## Comment j'ai fait
+## Comment j'ai fait ici
 
 J'ai d'abord lu la page de la catégorie pour avoir le titre, le prix, la note et le lien de chaque livre. Ensuite mon script est allé ouvrir les 19 fiches une par une pour récupérer ce qui n'est pas sur la liste, là le stock exact et le code UPC. Une seconde de pause entre chaque page pour ne pas surcharger le site.
 
-## Ce qui m'a fait tomber
+## Les soucis rencontrés puis résolus 
 
 Ma première version marchait… à moitié :
 
-- les prix sortaient en `Â£51.77` au lieu de `£51.77` → un problème d'encodage, réglé avec une seule ligne
-- les notes sortaient en mots (`Four`) → en fait la note est cachée dans le nom de la classe, pas dans le texte
-- les liens ressemblaient à `../../../olio_984/index.html` → impossibles à ouvrir tels quels, il a fallu les compléter
+- les prix sortaient en `Â£51.77` au lieu de `£51.77`. I9l y avait un problème d'encodage, ensuite réglé avec une seule ligne
+- les notes sortaient en mots (`Four`) → en fait la note est cachée dans le nom de la classe et non dans dans le texte
+- les liens ressemblaient à `../../../olio_984/index.html` ils étaient impossibles à ouvrir tels quels alors il a fallu que je les les complète moi même 
 
-Et un titre comme Quarter Life Poetry: Poems for the Young, Brok... m'a fait croire qu'il était coupé. C'était juste pandas qui raccourcissait l'affichage. J'ai vérifié aucun titre tronqué.
+Et un titre comme *Quarter Life Poetry: Poems for the Young, Brok...* m'a fait croire qu'il était coupé. C'était juste pandas qui raccourcissait l'affichage. J'ai vérifié aucun titre tronqué.
 
 ## Ce que ça donne
 
