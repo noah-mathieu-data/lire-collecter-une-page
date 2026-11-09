@@ -14,7 +14,7 @@ J'ai d'abord lu la page de la catégorie pour avoir le titre, le prix, la note e
 
 Ma première version marchait… à moitié :
 
-- les prix sortaient en *`Â£51.77`* au lieu de *`£51.77`*. I9l y avait un problème d'encodage, ensuite réglé avec une seule ligne
+- les prix sortaient en *`Â£51.77`* au lieu de *`£51.77`*. Iyl y avait un problème d'encodage, ensuite réglé avec une seule ligne
 - les notes sortaient en mots (*`Four`*) → en fait la note est cachée dans le nom de la classe et non dans dans le texte
 - les liens ressemblaient à *`../../../olio_984/index.html`* ils étaient impossibles à ouvrir tels quels alors il a fallu que je les les complète moi même 
 
